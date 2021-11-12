@@ -1,0 +1,73 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+	body.body
+		include ../modules/header/header
+		
+		main.main
+			section.intro
+				.intro__wrapper
+					.intro__info
+						h1.intro__title Закись азота
+							span с доставкой
+						p.intro__description Веселящий газ для ваших вечеринок с круглосуточной доставкой. Без выходных
+						
+						ul.intro__list
+							li.intro__item
+								b.intro__nr 1200+
+								span.intro__text клиентов в Москве
+							li.intro__item
+								b.intro__nr 500 000
+								span.intro__text Литров в месяц
+							li.intro__item
+								b.intro__nr 60
+								span.intro__text Минут доставка
+					picture.intro__frame
+						source(srcset="static/images/content/clown.webp" type="image/webp")
+						img(src="static/images/content/clown.png" alt="AZOT person").intro__frame-image
+						
+					.intro__offer.offer
+						ul.offer__list
+							li.offer__item
+								h3.offer_name 3 баллона по 3,5 литра
+								b.offer__price 6300 Р
+								p.offer__description +бесплатная доставка*
+								span.offer__note *по Москве в пределах МКАД
+							li.offer__item
+								h3.offer__name Специальная цена на баллон 3,5 литра
+								p.offer__description При покупке любого баллона
+						h2.offer__title 
+							| Доставка 
+							span 30 минут 
+							| в пределах МКАД
+			section.goods
+				.goods__wrapper
+					ul.goods__list
+						+catItem('', '', '', '', '')
+						+catItem('', '', '', '', '')
+						+catItem('', '', '', '', '')
+						+catItem('', '', '', '', '')
+						+catItem('', '', '', '', '')
+						+catItem('', '', '', '', '')
+						+catItem('', '', '', '', '')
+						+catItem('', '', '', '', '')
+			section.about
+				.about__wrapper
+					ul.about__list
+						
+		include ../modules/footer/footer
+		script(src="static/js/vendor/jquery-3.3.1.min.js")
+		script(src="static/js/main.js")
+		block script
