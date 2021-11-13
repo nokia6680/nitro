@@ -1,5 +1,5 @@
-mixin catItem(image, name, about, price, oldPrice)
-    li.catalog__item
+mixin catItem(type, image, name, about, price, oldPrice)
+    li(class="goods__item " +type)
         picture.goods__frame
             source(srcset="static/images/content/" +image +".webp" type="image/webp")
             img(src="static/images/content/" +image +".png" alt="" +name).goods__frame-image

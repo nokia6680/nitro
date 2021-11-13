@@ -1,0 +1,106 @@
+.intro {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, center);
+
+    margin-bottom: 3rem;
+
+    &__wrapper {
+        width: 100%;
+        @include flex-setting(column, flex-start, flex-start);
+
+        padding: 2rem 1.25rem;
+    }
+
+    &__info {
+        width: 100%;
+
+        @include flex-setting(column, flex-start, flex-start);
+
+        position: relative;
+    }
+
+    &__title {
+        @include font-setting($primary-font, 2rem, 1.2, 800, $bordo);
+        text-transform: uppercase;
+        text-align: left;
+        margin-bottom: 2rem;
+
+        span {
+            color: $white;
+        }
+    }
+
+    &__description {
+        @include font-setting($primary-font, 1rem, 1.222, 400, $gray);
+        text-align: left;
+        max-width: 75%;
+
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        width: 100%;
+
+        @include flex-setting(column, flex-start, flex-start);
+
+        z-index: 1;
+    }
+
+    &__item {
+        width: 50%;
+        @include flex-setting(column, flex-start, flex-start);
+
+        margin-bottom: 1.25rem;
+        padding-left: 1.25rem;
+
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 2px;
+            height: 100%;
+
+            background-color: $white;
+            top: 0;
+            left: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            align-self: flex-end;
+        }
+
+        &:first-child {
+            align-self: flex-start;
+        }
+
+        &:nth-child(2) {
+            align-self: center;
+        }
+    }
+
+    &__nr {
+        @include font-setting($primary-font, 1.5rem, 1.222, 700, $white);
+        margin-bottom: 0.5rem;
+    }
+
+    &__text {
+        @include font-setting($primary-font, 1rem, 1.222, 400, $gray);
+        text-align: left;
+    }
+
+    &__frame {
+        position: absolute;
+        width: 100%;
+
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        z-index: 0;
+        opacity: 0.5;
+    }
+}

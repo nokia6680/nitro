@@ -1,0 +1,111 @@
+.offer {
+    width: 100%;
+
+    @include flex-setting(column, flex-start, center);
+
+    margin-bottom: 2rem;
+
+    &__list {
+        width: 100%;
+
+        @include flex-setting(column, flex-start, center);
+
+        margin-bottom: 2rem;
+    }
+
+    &__item {
+        width: 100%;
+        @include flex-setting(column, flex-start, flex-start);
+        padding: 2rem 2rem 2rem 2rem;
+        border: 1px solid $white;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+
+        position: relative;
+        z-index: 1;
+
+        &:first-child {
+            &::after {
+                position: absolute;
+                content: '';
+
+                width: 144px;
+                height: 151px;
+
+                background-image: url('../images/content/clown-1.png');
+                background-position: 50% 50%;
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                z-index: 0;
+                opacity: 0.4;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+
+            &::after {
+                position: absolute;
+                content: '';
+
+                width: 126px;
+                height: 132px;
+
+                background-image: url('../images/content/clown-2.png');
+                background-position: 50% 50%;
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                z-index: 0;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &__name {
+        @include font-setting($primary-font, 1.5rem, 1.222, 800, $bordo);
+        text-transform: uppercase;
+        text-align: left;
+        margin-bottom: 0.625rem;
+    }
+
+    &__price {
+        @include font-setting($primary-font, 1.625rem, 1.222, 800, $white);
+        text-transform: uppercase;
+        text-align: left;
+        margin-bottom: 0.625rem;
+    }
+
+    &__description {
+        @include font-setting($primary-font, 0.875rem, 1.222, 400, $white);
+        text-align: left;
+        margin-bottom: 0.625rem;
+    }
+
+    &__note {
+        display: inline-flex;
+        margin-top: auto;
+        margin-bottom: 0;
+
+        @include font-setting($primary-font, 0.75rem, 1.222, 400, $gray);
+    }
+
+    &__title {
+        @include font-setting($primary-font, 1.5rem, 1.222, 700, $white);
+        text-transform: uppercase;
+        text-align: center;
+
+        span {
+            color: $bordo;
+        }
+    }
+}

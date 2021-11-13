@@ -20,8 +20,8 @@ html(lang="ru-RU")
 			section.intro
 				.intro__wrapper
 					.intro__info
-						h1.intro__title Закись азота
-							span с доставкой
+						h1.intro__title Закись азота 
+							span с&nbsp;доставкой
 						p.intro__description Веселящий газ для ваших вечеринок с круглосуточной доставкой. Без выходных
 						
 						ul.intro__list
@@ -35,15 +35,15 @@ html(lang="ru-RU")
 								b.intro__nr 60
 								span.intro__text Минут доставка
 					picture.intro__frame
-						source(srcset="static/images/content/clown.webp" type="image/webp")
-						img(src="static/images/content/clown.png" alt="AZOT person").intro__frame-image
+						source(srcset="static/images/content/intro-balls.webp" type="image/webp")
+						img(src="static/images/content/intro-balls.png" alt="AZOT person").intro__frame-image
 						
 			section.goods
 				.goods__wrapper
 					.goods__offer.offer
 						ul.offer__list
 							li.offer__item
-								h3.offer_name 3 баллона по 3,5 литра
+								h3.offer__name 3 баллона по 3,5 литра
 								b.offer__price 6300 Р
 								p.offer__description +бесплатная доставка*
 								span.offer__note *по Москве в пределах МКАД
@@ -55,14 +55,14 @@ html(lang="ru-RU")
 							span 30 минут 
 							| в пределах МКАД
 					ul.goods__list
-						+catItem('goods-1', 'Баллон 3,5 литра', 'Газ N2O - 600гр  (пищевая закись азота)', '2500', '2400')
-						+catItem('goods-2', 'Баллон 2 литра', 'Газ N2O - 1300гр  (пищевая закись азота)', '4200', '3200')
-						+catItem('goods-3', 'Баллон 5 литров', 'Газ N2O - 2500гр  (пищевая закись азота)', '6200', '4200')
-						+catItem('goods-4', 'Баллон 10 литров', 'Газ N2O - 6000гр  (пищевая закись азота)', '13000', '6500')
-						+catItem('goods-5', 'Насадка для баллона', 'Подходит на баллоны  2, 5 и 10 литров', '1000', '')
-						+catItem('goods-6', 'Подставка под баллон', 'Подходит на баллоны  2, 5 и 10 литров', '1000', '')
-						+catItem('goods-7', 'Сумка-переноска', 'Подходит на баллоны  3.5, 2, 5 и 10 литров', '2000', '')
-						+catItem('goods-8', 'Попперсы в ассортименте', 'Для получения  новых эмоций', '1000', '')
+						+catItem('', 'goods-1', 'Баллон 3,5 литра', 'Газ N2O - 600гр  (пищевая закись азота)', '2500', '2400')
+						+catItem('', 'goods-2', 'Баллон 2 литра', 'Газ N2O - 1300гр  (пищевая закись азота)', '4200', '3200')
+						+catItem('', 'goods-2', 'Баллон 5 литров', 'Газ N2O - 2500гр  (пищевая закись азота)', '6200', '4200')
+						+catItem('', 'goods-2', 'Баллон 10 литров', 'Газ N2O - 6000гр  (пищевая закись азота)', '13000', '6500')
+						+catItem('singlePrice', 'goods-5', 'Насадка для баллона', 'Подходит на баллоны  2, 5 и 10 литров', '1000', '')
+						+catItem('singlePrice', 'goods-6', 'Подставка под баллон', 'Подходит на баллоны  2, 5 и 10 литров', '1000', '')
+						+catItem('singlePrice', 'goods-7', 'Сумка-переноска', 'Подходит на баллоны  3.5, 2, 5 и 10 литров', '2000', '')
+						+catItem('singlePrice', 'goods-8', 'Попперсы в ассортименте', 'Для получения  новых эмоций', '1000', '')
 			section.about
 				.about__wrapper
 					ul.about__list
@@ -90,7 +90,7 @@ html(lang="ru-RU")
 							b.about__subtitle Как можно заправить свой баллон закисью азота?
 							p.about__description Заправка баллонов газом осуществляется путем обмена Вашего пустого баллона на наш полный с доплатой. Курьер на месте произведет осмотр баллона и оформит обмен с доплатой. Все необходимые вопросы при обмене баллона у Вас уточнит оператор при заказе, это оптимальный способ экономить при заказе закиси азота.
 		include ../modules/footer/footer
-		include ../modules/blocks/order-form
+		include ../modules/blocks/popup-form
 		//script(src="static/js/vendor/jquery-3.3.1.min.js")
 		script(src="static/js/main.js")
 		block script
