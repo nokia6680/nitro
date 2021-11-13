@@ -1,0 +1,48 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+	body.body
+		include ../modules/header/header
+
+		main.main
+			section.catalog
+				.catalog__wrapper
+					.catalog__offer.offer
+						ul.offer__list
+							li.offer__item
+								h3.offer_name 3 баллона по 3,5 литра
+								b.offer__price 6300 Р
+								p.offer__description +бесплатная доставка*
+								span.offer__note *по Москве в пределах МКАД
+							li.offer__item
+								h3.offer__name Специальная цена на баллон 3,5 литра
+								p.offer__description При покупке любого баллона
+						h2.offer__title 
+							| Доставка 
+							span 30 минут 
+							| в пределах МКАД
+					ul.catalog__list
+						+catItem('goods-1', 'Баллон 3,5 литра', 'Газ N2O - 600гр  (пищевая закись азота)', '2500', '2400')
+						+catItem('goods-2', 'Баллон 2 литра', 'Газ N2O - 1300гр  (пищевая закись азота)', '4200', '3200')
+						+catItem('goods-3', 'Баллон 5 литров', 'Газ N2O - 2500гр  (пищевая закись азота)', '6200', '4200')
+						+catItem('goods-4', 'Баллон 10 литров', 'Газ N2O - 6000гр  (пищевая закись азота)', '13000', '6500')
+						+catItem('goods-5', 'Насадка для баллона', 'Подходит на баллоны  2, 5 и 10 литров', '1000', '')
+						+catItem('goods-6', 'Подставка под баллон', 'Подходит на баллоны  2, 5 и 10 литров', '1000', '')
+						+catItem('goods-7', 'Сумка-переноска', 'Подходит на баллоны  3.5, 2, 5 и 10 литров', '2000', '')
+						+catItem('goods-8', 'Попперсы в ассортименте', 'Для получения  новых эмоций', '1000', '')
+		include ../modules/footer/footer
+		//script(src="static/js/vendor/jquery-3.3.1.min.js")
+		script(src="static/js/main.js")
+		block script

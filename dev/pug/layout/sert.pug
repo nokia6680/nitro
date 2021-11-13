@@ -1,0 +1,41 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+	body.body
+		include ../modules/header/header
+		main.main
+			section.sert
+				.sert__wrapper
+					h1.sert__title Сертификаты
+					p.sert__description Сертифицированный газ закиси азота – это тот самый качественный продукт, который так активно ищется в Москве всеми пользователями пищевой закиси азота. Качественный газ, как ни странно, сегодня относительная редкость в столице, поскольку вместе с ростом его популярности выросло и количество контрафактной продукции. Однако, не стоит отчаиваться, поскольку наша компания достаточно быстро отреагировала на требования рынка и сегодня предлагает Вам исключительно качественную, сертифицированную, изготовленную по всем ГОСТ пищевую закись азота. У нас Вы сможете заказать ее с доставкой в любое время дня и ночи как в пределах МКАД, так и в Подмосковье, получить баллон всего за 30 минут у нашего курьера, а также затребовать у него все необходимые копии сертификатов, чтобы убедиться в высоком качестве нашей продукции. Все баллоны, которые Вы заказываете опломбированы и вскрываются при Вас, если есть такая необходимость. Обращайтесь и покупайте только качественный, сертифицированный газ закиси азота.
+					p.sert__description ВНИМАНИЕ! ОФИЦИАЛЬНО СОГЛАСНО ЗАКОНУ ОТ 1.1.2021 ПРОДАЖА ПИЩЕВОЙ ЗАКИСИ АЗОТА ФИЗИЧЕСКИМ ЛИЦАМ С ЦЕЛЬЮ УПОТРЕБЛЕНИЯ ЗАПРЕЩЕНА, ПРОДАЖА ОСУЩЕСТВЛЯЕТСЯ ИСКЛЮЧИТЕЛЬНО ПРОФИЛЬНЫМ ОРГАНИЗАЦИЯМ ПРИ ЗАКЛЮЧЕНИИ ДОГОВОРА И ПОСЛЕ ПРЕДОСТАВЛЕНИЯ НЕОБХОДИМОГО ПАКЕТА ДОКУМЕНТОВ! САЙТ НЕ ПРОПАГАНДИРУЕТ И НЕ ПОДДЕРЖИВАЕТ УПОТРЕБЛЕНИЕ ПИЩЕВОЙ ЗАКИСИ АЗОТА!
+					
+					ul.sert__list
+						li.sert__item
+							picture.sert__frame
+								source(srcset="static/images/content/sert-1.webp" type="image/webp")
+								img(src="static/images/content/sert-1.jpg" alt="Лицензия").sert__frame-image
+						li.sert__item
+							picture.sert__frame
+								source(srcset="static/images/content/sert-2.webp" type="image/webp")
+								img(src="static/images/content/sert-2.jpg" alt="Сертификат соответствия").sert__frame-image
+						li.sert__item
+							picture.sert__frame
+								source(srcset="static/images/content/sert-3.webp" type="image/webp")
+								img(src="static/images/content/sert-3.jpg" alt="Приложения").sert__frame-image
+		include ../modules/footer/footer
+		//script(src="static/js/vendor/jquery-3.3.1.min.js")
+		script(src="static/js/main.js")
+		block script

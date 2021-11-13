@@ -1,5 +1,5 @@
-mixin catItem(type, image, name, about, price, oldPrice)
-    li(class="" +type)
+mixin catItem(image, name, about, price, oldPrice)
+    li.catalog__item
         picture.goods__frame
             source(srcset="static/images/content/" +image +".webp" type="image/webp")
             img(src="static/images/content/" +image +".png" alt="" +name).goods__frame-image
@@ -8,8 +8,8 @@ mixin catItem(type, image, name, about, price, oldPrice)
             p.goods__about=about
         ul.goods__info
             li.goods__price
-                b=price
+                b=price +'₽'
             li.goods__price
-                b=oldPrice
+                b=oldPrice +'₽'
                 span замена баллона
         button(type="button").goods__order Заказать
