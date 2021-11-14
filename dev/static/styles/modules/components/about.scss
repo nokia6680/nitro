@@ -50,3 +50,19 @@
         margin-bottom: 0.625rem;
     }
 }
+
+@include min-screen(720px) {
+    .about {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-bottom: 4rem;
+
+        &__item {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

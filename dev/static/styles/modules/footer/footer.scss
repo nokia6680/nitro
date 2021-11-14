@@ -68,3 +68,19 @@
         }
     }
 }
+
+@include min-screen(720px) {
+    .footer {
+        padding: 3rem 2rem;
+
+        &__wrapper {
+            grid-row-gap: 3rem;
+        }
+
+
+        &__description {
+            margin-bottom: 0.5rem;
+            max-width: 80%;
+        }
+    }
+}

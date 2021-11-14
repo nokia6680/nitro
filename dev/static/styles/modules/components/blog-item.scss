@@ -63,3 +63,34 @@
         margin-bottom: 0.625rem;
     }
 }
+
+@include min-screen(720px) {
+    .blog-item {
+        padding: 3rem 2rem;
+
+        &__frame {
+            margin-bottom: 3rem;
+        }
+
+        &__body {
+            p {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+
+                &:last-of-type {
+                    margin-bottom: 0rem;
+                }
+            }
+
+            b {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        &__name {
+            font-size: 1.125rem;
+            margin-bottom: 1.25rem;
+        }
+    }
+}
