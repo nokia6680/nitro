@@ -104,3 +104,49 @@
         opacity: 0.5;
     }
 }
+
+@include min-screen(720px) {
+    .intro {
+        margin-bottom: 4rem;
+
+        &__wrapper {
+            padding: 3rem 2rem;
+        }
+
+        &__title {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        &__description {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+        }
+
+        &__list {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__item {
+            width: 32%;
+            margin-bottom: 0;
+        }
+
+        &__nr {
+            font-size: 2rem;
+            margin-bottom: 0.625rem;
+        }
+
+        &__text {
+            font-size: 1.25rem;
+            max-width: 80%;
+        }
+
+        &__frame {
+            width: 70%;
+            z-index: -1;
+            bottom: 0;
+        }
+    }
+}
