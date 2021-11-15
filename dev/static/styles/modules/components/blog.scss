@@ -147,3 +147,41 @@
         }
     }
 }
+
+@include min-screen(1280px) {
+    .blog {
+        padding: 0;
+        padding-top: 4rem;
+
+        &__wrapper {
+            max-width: 1170px;
+            margin-bottom: 7rem;
+        }
+
+        &__title {
+            font-size: 4.375rem;
+            align-self: flex-start;
+            margin-bottom: 4rem;
+        }
+
+        &__item {
+            margin-bottom: 3rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &__link {
+            grid-column-gap: 2.25rem;
+        }
+
+        &__name {
+            margin-bottom: 1.125rem;
+        }
+
+        &__description {
+            font-size: 0.875rem;
+        }
+    }
+}

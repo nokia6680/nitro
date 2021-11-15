@@ -40,7 +40,7 @@ body {
 
       background-image: url('../images/content/bg-bottom.png');
       background-position: bottom center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
 
       bottom: 0;
@@ -64,7 +64,7 @@ body {
 
           background-image: url('../images/content/main-bg.png');
           background-position: top center;
-          background-size: contain;
+          background-size: cover;
           background-repeat: no-repeat;
 
           top: 0;
@@ -74,6 +74,18 @@ body {
           pointer-events: none;
       }
   }
+}
+
+.body--catalog,
+.body--sert,
+.body--delivery,
+.body--law,
+.body--blog,
+.body--item,
+.body--contacts {
+    &::before {
+        display: none;
+    }
 }
 
 *,

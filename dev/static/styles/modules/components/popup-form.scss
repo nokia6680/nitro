@@ -10,9 +10,8 @@
     backdrop-filter: blur(50px);
 
     z-index: 9999;
-
     display: none;
-
+    
     &.active {
         display: flex;
     }
@@ -58,10 +57,48 @@
         text-decoration: none;
 
         margin-bottom: 2rem;
+        transition: 0.4s $cubic;
+
+        &:hover,
+        &:active {
+            color: $bordo;
+            transition: 0.4s $cubic;
+        }
     }
 
     &__note {
         @include font-setting($primary-font, 0.75rem, 1.333, 300, $gray);
         text-align: left;
+    }
+}
+
+@include min-screen(1280px) {
+    .popup-form {
+        &__wrapper {
+            max-width: 516px;
+            padding: 2.75rem 2.75rem;
+        }
+
+        &__closer {
+            top: 0.625rem;
+            right: 0.625rem;
+            background-size: 50%;
+            cursor: pointer;
+        }
+
+        &__description {
+            margin-bottom: 2.25rem;
+        }
+
+        &__link {
+            font-size: 2.5rem;
+            white-space: nowrap;
+            margin-bottom: 2.25rem;
+        }
+
+        &__note {
+            font-size: 0.875rem;
+            max-width: 340px;
+        }
     }
 }

@@ -59,3 +59,37 @@
         }
     }
 }
+
+@include min-screen(1280px) {
+    .delivery {
+        padding: 0;
+        padding-top: 4rem;
+
+        &__wrapper {
+            max-width: 1170px;
+            margin-bottom: 10rem;
+        }
+
+        &__title {
+            font-size: 4.375rem;
+            align-self: flex-start;
+            margin-bottom: 1.875rem;
+        }
+
+        &__description {
+            font-size: 0.875rem;
+            margin-bottom: 1.125rem;
+
+            &:last-of-type {
+                margin-bottom: 3.125rem;
+            }
+        }
+
+        &__subtitle {
+            font-size: 0.875rem;
+
+            font-weight: 400;
+            margin-bottom: 0.625rem;
+        }
+    }
+}
