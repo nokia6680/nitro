@@ -32,7 +32,7 @@
 
         @include flex-setting(column, flex-start, center);
 
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 80%);
+        background: linear-gradient(to bottom, rgba(36, 36, 36, 1) 0%, rgba(13, 13, 13, 1) 100%);
 
         border-radius: 10px;
 
@@ -108,7 +108,7 @@
         width: 100%;
         padding: 0.625rem 0;
         @include flex-setting(column, center, center);
-        @include font-setting($primary-font, 1rem, 1, 500, $white);
+        @include font-setting($primary-font, 1rem, 1, 800, $white);
 
         text-transform: uppercase;
         background-color: $bordo;
@@ -184,6 +184,140 @@
         &__order {
             padding: 1rem 0;
             font-size: 1.125rem;
+        }
+    }
+}
+
+@include min-screen(1280px) {
+    .goods {
+        padding: 0;
+        margin-bottom: 6.25rem;
+
+        position: relative;
+        z-index: 2;
+
+        &::before {
+            position: absolute;
+            content: '';
+
+            width: 524px;
+            height: 861px;
+            background-image: url('../images/content/smoke-large.png');
+            background-position: 50% 50%;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            left: 0;
+            bottom: 0%;
+            transform: translateY(-0%);
+
+            z-index: -2;
+            opacity: 0.5;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+
+            width: 524px;
+            height: 861px;
+            background-image: url('../images/content/smoke-large.png');
+            background-position: 50% 50%;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            right: 0;
+            bottom: 0%;
+            transform: rotate(180deg);
+
+            z-index: -2;
+            opacity: 0.5;
+        }
+
+        &__wrapper {
+            max-width: 1170px;
+        }
+
+        &--catalog {
+            padding-top: 4rem;
+        }
+
+        &__list {
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 1.875rem;
+            grid-row-gap: 2.625rem;
+            z-index: 10;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+
+                width: 256px;
+                height: 234px;
+
+                background-image: url('../images/content/clown-3.png');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                left: -16.875rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+
+                width: 257px;
+                height: 268px;
+
+                background-image: url('../images/content/clown-4.png');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                right: -17.875rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &__item {
+            z-index: 10;
+            padding: 1.75rem 0.9375rem 0.875rem 0.9375rem;
+        }
+
+        &__frame {
+            min-height: 200px;
+            max-height: 200px;
+            margin-bottom: 1rem;
+
+            padding-left: 0.3125rem;
+            padding-right: 0.3125rem;
+
+            &-image {
+                max-height: 200px;
+                max-width: 200px;
+            }
+        }
+
+        &__body {
+            padding-left: 0.3125rem;
+            padding-right: 0.3125rem;
+            margin-bottom: 1.125rem;
+        }
+
+        &__name {
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+
+        &__price {
+            b {
+                font-size: 1.5rem;
+            }
         }
     }
 }

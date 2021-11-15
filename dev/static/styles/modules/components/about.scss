@@ -66,3 +66,38 @@
         }
     }
 }
+
+@include min-screen(1280px) {
+    .about {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 20rem;
+
+        &__wrapper {
+            max-width: 1170px;
+        }
+
+        &__item {
+            margin-bottom: 1.875rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__title {
+            font-size: 1.125rem;
+            margin-bottom: 0.625rem;
+        }
+
+        &__description {
+            font-size: 0.875rem;
+            margin-bottom: 0.625rem;
+        }
+
+        &__subtitle {
+            font-size: 0.875rem;
+            text-transform: none;
+        }
+    }
+}

@@ -47,11 +47,12 @@ body {
       left: 0;
 
       z-index: 0;
+      pointer-events: none;
   }
 
   @media only screen and (min-width: 720px) {
       &::after {
-          max-height: 800px;
+          max-height: 100%;
       }
 
       &::before {
@@ -62,15 +63,15 @@ body {
           height: 100%;
 
           background-image: url('../images/content/main-bg.png');
-          background-position: bottom center;
-          background-size: cover;
+          background-position: top center;
+          background-size: contain;
           background-repeat: no-repeat;
 
           top: 0;
           left: 0;
 
           z-index: 0;
-          display: none;
+          pointer-events: none;
       }
   }
 }
