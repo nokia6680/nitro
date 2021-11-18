@@ -1,0 +1,23 @@
+.order
+    .order__wrapper
+        button(type="button").order__closer
+        
+        form(method="#" action="#").order__form
+            ul.order__list
+                li.order__item
+                    label(for="name").order__label Введите имя:
+                    input(type="text" id="name" placeholder="Ваше имя").order__input
+                    span.order__error Поле должно быть заполнено
+                li.order__item
+                    label(for="tel").order__label Введите номер телефона:
+                    input(type="tel" id="tel" placeholder="Номер телефона").order__input 
+                    span.order__error Поле должно быть заполнено
+            .order__agreement
+                input(type="checkbox" id="policy" name="policy").order__checkbox
+                label(for="policy").order__agreement-label Согласен с 
+                    a(href="#" target="_blank") политикой обработки персональных данных
+            button(type="submit").order__submit Отправить
+        
+        .order__reaction
+            p.order__reaction-name Спасибо! 
+            p.order__reaction-text Ваша заявка отправлена, оператор перезвонит для подтверждения заказа.

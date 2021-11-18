@@ -1,6 +1,6 @@
 mixin catItem(type, image, name, about, price, oldPrice)
     li(class="goods__item " +type)
-        picture.goods__frame
+        picture(class="goods__frame " +image)
             source(srcset="static/images/content/" +image +".webp" type="image/webp")
             img(src="static/images/content/" +image +".png" alt="" +name).goods__frame-image
         .goods__body
